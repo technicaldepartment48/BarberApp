@@ -7,7 +7,7 @@ if(isset($_POST["amount"])){
 
 
 
-	if( empty($_POST["day"]) || empty($_POST["week"]) || empty($_POST["year"]) || empty($_POST["year"])){
+	if( empty($_POST["day"]) || empty($_POST["date"]) || empty($_POST["week"]) || empty($_POST["month"]) || empty($_POST["year"])){
 
 
 	
@@ -20,19 +20,21 @@ if(isset($_POST["amount"])){
 
 	$_SESSION["amount"]  = $_POST["amount"];
 	$_SESSION["day"]  = $_POST["day"];
+	$_SESSION["date"]  = $_POST["date"];
 	$_SESSION["week"]  = $_POST["week"];
 	$_SESSION["month"]  = $_POST["month"];
 	$_SESSION["year"]  = $_POST["year"];
 
 	$amount = $_SESSION["amount"];
 	$day = $_SESSION["day"];
+	$date = $_SESSION["date"];
 	$week = $_SESSION["week"];
 	$month = $_SESSION["month"];
 	$year = $_SESSION["year"];
 
 	echo "<h4>RECORD SAVED</h4>";
 
-	echo $_SESSION["amount"].'<br/>'.$_SESSION["day"].'<br/>'.$_SESSION["week"].'<br/>'.$_SESSION["month"].'<br/>'.$_SESSION["year"];
+	echo $_SESSION["amount"].'<br/>'.$_SESSION["day"].'<br/>'.$_SESSION["day"].'<br/>'.$_SESSION["week"].'<br/>'.$_SESSION["month"].'<br/>'.$_SESSION["year"];
 
 
 
@@ -44,9 +46,9 @@ if(isset($_POST["amount"])){
 
 
 	$conn = mysqli_connect(hostname: $host,
-							username: $username,
-							password: $password,
-							database: $dbname);
+			       username: $username,
+			       password: $password,
+			       database: $dbname);
 
 
 	if(mysqli_connect_errno()){
@@ -57,7 +59,7 @@ if(isset($_POST["amount"])){
 	
 	echo "<br/><br/><br/>Database Connection successful.";
 
-	$sql = "INSERT INTO sales(amount, dayt, week, montht, yeart )
+	$sql = "INSERT INTO sales(amount, day_col, date_col, week, month_col, year_col )
 	     	VALUES (?, ?, ?, ?, ?)";
 
 
@@ -67,9 +69,10 @@ if(isset($_POST["amount"])){
 		die(mysqli_error($conn));
 	}
 
-	mysqli_stmt_bind_param($stmt, "isisi",
+	mysqli_stmt_bind_param($stmt, "isiisi",
 							$amount,
 							$day,
+			       				$date,
 							$week,
 							$month,
 							$year); 
