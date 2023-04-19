@@ -19,10 +19,15 @@ in your htdocs, and copy files there, lauch as usual and test, form holds 6 inpu
 Fill accordinly, For example its; Saturday 22nd 4th week of April, year 2023 and my sales as below
 
 500 - Customer1
+
 100 - Customer2
+
 700 - Customer3
+
 600 - Customer4
+
 400 - Customer5
+
 800 - Customer6
 
 # Fill as follows
