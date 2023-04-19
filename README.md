@@ -28,10 +28,15 @@ Fill accordinly, For example its; Saturday 22nd 4th week of April, year 2023 and
 # Fill as follows
 
 Amount : 500 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
+
 Amount : 100 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
+
 Amount : 700 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
+
 Amount : 600 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
+
 Amount : 400 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
+
 Amount : 800 , Day : Saturday , Date : 22 , Week : 4 , Month : April , Year : 2023
 
 Then submit the form, you will automatically see a Record Saved message and a table below with all your info accordinly displayed 
